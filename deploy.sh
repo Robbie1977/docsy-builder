@@ -30,6 +30,8 @@ npm install
 
 cd /src/
 
+tree /src/
+
 hugo mod graph
 
 rm -rf public/
