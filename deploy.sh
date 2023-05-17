@@ -16,11 +16,16 @@ HUGO_ENV="production"
 
 cd /src/
 
+git submodule add https://github.com/google/docsy.git themes/docsy
+cd themes/docsy
+git checkout v0.6.0
+
 npm install --global yarn
 
 npm install --save-dev autoprefixer postcss-cli postcss
 
-cd /src/themes/docsy/ 
+cd /src/themes/docsy
+
 npm install
 
 cd /src/
