@@ -12,9 +12,21 @@
 #See the License for the specific language governing permissions and
 #limitations under the License.
 #
-npm install -D autoprefixer
-npm install -D postcss-cli
-npm install -D postcss
+HUGO_ENV="production"
+
+cd /src/
+
+npm install --global yarn
+
+npm install --save-dev autoprefixer postcss-cli postcss
+
+cd /src/themes/docsy/ 
+npm install
+
+cd /src/
+
+hugo mod graph
+
 rm -rf public/
-HUGO_ENV="production" hugo --gc || exit 1
+HUGO_ENV="production" hugo --enableGitInfo --minify --templateMetrics --gc -v || exit 1
 s3deploy -source=public/ -region=eu-west-1 -bucket=bep.is -distribution-id=E8OKNT7W9ZYZ2 -path temp/td
