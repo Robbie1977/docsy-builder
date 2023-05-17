@@ -32,6 +32,8 @@ cd /src/
 
 tree /src/
 
+hugo mod clean --all
+
 hugo mod graph
 
 rm -rf public/
