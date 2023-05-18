@@ -41,5 +41,5 @@ hugo mod clean --all
 hugo mod graph
 
 rm -rf public/
-HUGO_ENV="production" hugo --enableGitInfo --minify --templateMetrics --gc -v || exit 1
+HUGO_ENV="production" hugo --enableGitInfo --minify --templateMetrics --renderToDisk --gc -v || exit 1
 s3deploy -source=public/ -region=eu-west-1 -bucket=bep.is -distribution-id=E8OKNT7W9ZYZ2 -path temp/td
