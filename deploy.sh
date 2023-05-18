@@ -34,6 +34,8 @@ cd /src/
 
 tree /src/
 
+hugo config
+
 hugo mod clean --all
 
 hugo mod graph
