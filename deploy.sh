@@ -14,6 +14,8 @@
 #
 HUGO_ENV="production"
 
+set -x
+
 cd /src/
 
 git submodule add https://github.com/google/docsy.git themes/docsy
