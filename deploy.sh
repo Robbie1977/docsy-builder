@@ -30,6 +30,8 @@ cd /src/themes/docsy
 
 npm install
 
+git config --global --add safe.directory /src
+
 cd /src/
 
 tree /src/
